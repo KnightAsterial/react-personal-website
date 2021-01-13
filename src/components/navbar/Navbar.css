@@ -1,0 +1,21 @@
+.navbar {
+  padding-top: 1em;
+  height: 4em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-link {
+  padding-left: 3em;
+  padding-right: 3em;
+  font-family: 'Red Hat Text', 'Roboto', 'Ubuntu', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #0D1B2A;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #30ADC9;
+}

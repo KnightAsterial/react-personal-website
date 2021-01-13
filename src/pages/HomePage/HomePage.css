@@ -1,0 +1,48 @@
+.homepage {
+  padding-top: 3em;
+  min-height: calc(100vh - 5em);
+}
+
+.landing {
+  display: flex;
+}
+
+.description {
+  width: 60%;
+  position: relative;
+  text-align: left;
+}
+.description img {
+  padding-left: 4em;
+  width: calc(100% - 3em);
+  max-width: 70em;
+}
+.description p {
+  position: absolute;
+  left: min(4em + 28%, 23.6em);
+  top: 67%;
+}
+
+.sidePhoto {
+  width: 40%
+}
+
+.homepage a {
+  text-decoration: none;
+  position: relative;
+  color: #0D1B2A;
+}
+.homepage a::after {
+  content: "";
+  background-color: rgba(252, 119, 83, 0.5);
+  width: calc(100% + 0.2em);
+  height: 30%;
+  position: absolute;
+  left: -0.1em;
+  bottom: 0.1em;
+  transition: ease-out 0.25s;
+}
+
+.homepage a:hover::after {
+  height: 87%;
+}

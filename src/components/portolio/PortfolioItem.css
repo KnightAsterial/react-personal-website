@@ -1,0 +1,30 @@
+.portfolio-item {
+  display: flex;
+  margin: 0.7em 0em;
+}
+
+.portfolio-item-left {
+  width: 30%;
+  text-align: left;
+  font-size: 24px;
+}
+.portfolio-item-left p{
+  margin: 0em 0em;
+}
+.portfolio-item-org {
+  font-weight: bold;
+}
+.portfolio-item-title {
+  font-style: italic;
+}
+
+.portfolio-item-right {
+  width: 70%;
+  text-align: left;
+}
+.portfolio-item-right ul{
+  margin-top: 0em;
+}
+.portfolio-item-right li:not(:last-child) {
+  margin-bottom: 0.4em;
+}

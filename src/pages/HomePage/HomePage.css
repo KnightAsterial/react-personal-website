@@ -1,10 +1,10 @@
 .homepage {
   padding-top: 3em;
-  min-height: calc(100vh - 5em);
 }
 
 .landing {
   display: flex;
+  min-height: calc(100vh - 5em);
 }
 
 .description {
@@ -17,22 +17,22 @@
   width: calc(100% - 3em);
   max-width: 70em;
 }
-.description p {
+.description .text {
   position: absolute;
   left: min(4em + 28%, 23.6em);
-  top: 67%;
+  top: 60%;
 }
 
 .sidePhoto {
   width: 40%
 }
 
-.homepage a {
+a.text-link {
   text-decoration: none;
   position: relative;
   color: #0D1B2A;
 }
-.homepage a::after {
+a.text-link::after {
   content: "";
   background-color: rgba(252, 119, 83, 0.5);
   width: calc(100% + 0.2em);
@@ -43,6 +43,20 @@
   transition: ease-out 0.25s;
 }
 
-.homepage a:hover::after {
+a.text-link:hover::after {
   height: 87%;
+}
+
+a.icon-link {
+  color: #A9AFB6;
+  margin-right: 0.5em;
+  font-size: 20px;
+  transition: ease-in 0.1s; 
+}
+a.icon-link:hover {
+  color: #0D1B2A;
+}
+
+.hp-accomplish {
+  margin: 0em 10%;
 }

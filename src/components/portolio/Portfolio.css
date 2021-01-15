@@ -1,0 +1,17 @@
+.portf-section-header {
+  font-weight: normal;
+  font-size: 32px;
+  position: relative;
+  margin-bottom: 1em;
+}
+
+.portf-section-header::after {
+  content:"";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  margin-left:-50px;
+  width: 100px;
+  height: 1px;
+  background-color: var(--main-black);
+}

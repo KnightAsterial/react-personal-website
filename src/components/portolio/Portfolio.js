@@ -30,19 +30,19 @@ class Portfolio extends React.Component {
 
     return (
       <div className="portfolio">
-        {filteredExperiences.length > 0 && <h1 className="section-header">Experiences</h1>}
+        {filteredExperiences.length > 0 && <h1 className="portf-section-header">Experiences</h1>}
         {filteredExperiences.map(item => (
-          <PortfolioItem value={item} key={item.organization+item.title}/>
+          <PortfolioItem value={item} key={item.organization+item.title+item.timeframe}/>
           ))}
 
-        {filteredMentorship.length > 0 && <h1 className="section-header">Mentorship</h1>}
+        {filteredMentorship.length > 0 && <h1 className="portf-section-header">Mentorship</h1>}
         {filteredMentorship.map(item => (
-          <PortfolioItem value={item} key={item.organization+item.title}/>
+          <PortfolioItem value={item} key={item.organization+item.title+item.timeframe}/>
           ))}
 
-        {filteredAwards.length > 0 && <h1 className="section-header">Awards</h1>}
+        {filteredAwards.length > 0 && <h1 className="portf-section-header">Awards</h1>}
         {filteredAwards.map(item => (
-          <PortfolioItem value={item} key={item.organization+item.title}/>
+          <PortfolioItem value={item} key={item.organization+item.title+item.timeframe}/>
           ))}
       </div>
     )

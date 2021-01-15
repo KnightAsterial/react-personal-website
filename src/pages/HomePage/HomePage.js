@@ -8,6 +8,19 @@ import Portfolio from './../../components/portolio/Portfolio';
 class HomePage extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      filters: [],
+      filterText: "",
+    };
+
+    this.handleFilterInput = this.handleFilterInput.bind(this);
+  }
+
+  handleFilterInput(event) {
+    console.log(event.target.value.replaceAll(/[^a-zA-Z ]/g, "").split(" "));
+    this.setState((state, props) => {
+      return {filterText: event.target.value, filters: event.target.value.replaceAll(/[^a-zA-Z ]/g, "").split(" ")}
+    });
   }
 
   render() {
@@ -32,11 +45,11 @@ class HomePage extends React.Component {
           <div className="accomplish-text container">
             <h1>I am a <b>Computer Science</b> major</h1>
             <h1>studying at the <b>University of California, Berkeley</b>.</h1>
-            <div className="accomplish-input-container"><span>I work with </span><input autocomplete="off"></input></div>
+            <div className="accomplish-input-container"><span>I work with </span><input autocomplete="off" value={this.state.filterText} onChange={this.handleFilterInput}></input></div>
           </div>
           <hr></hr>
           <div className="container">
-            <Portfolio experiences={test} mentorship={test} awards={[]} filters={[]}/>
+            <Portfolio experiences={test} mentorship={test} awards={[]} filters={this.state.filters}/>
           </div>
         </div>
       </div>
@@ -53,16 +66,16 @@ const test = [
   tags: ["full stack", "aws", "databases", "angular", "nodejs"],
 },
 {
-  organization: "Berkeley Codebase",
-  title: "Software Developer",
-  timeframe: "August 2019 - Present",
+  organization: "Lockheed Martin",
+  title: "Software Engineer Intern",
+  timeframe: "July 2019 - August 2020",
   description: ["Developed for Digital Academy, Lockheed’s internal education platform used by over 23,000 employees", "Helped transform Digital Academy from a MEAN site with an Express backend into a serverless application built with AWS Lambda and NodeJS, reducing operational costs by 23% and allowing for zero downtime deployments", "Created full-stack AWS serverless applications using NodeJS, Angular, and DynamoDB for Lockheed's rapid prototyping team and implemented OpenID authentication for WordPress sites"],
   tags: ["full stack", "aws", "databases", "angular", "nodejs"],
 },
 {
-  organization: "Berkeley Codebase",
-  title: "Software Developer",
-  timeframe: "August 2019 - Present",
+  organization: "Ryan's Corporation",
+  title: "Software Person",
+  timeframe: "Never - Never",
   description: ["Developed for Digital Academy, Lockheed’s internal education platform used by over 23,000 employees", "Helped transform Digital Academy from a MEAN site with an Express backend into a serverless application built with AWS Lambda and NodeJS, reducing operational costs by 23% and allowing for zero downtime deployments", "Created full-stack AWS serverless applications using NodeJS, Angular, and DynamoDB for Lockheed's rapid prototyping team and implemented OpenID authentication for WordPress sites"],
   tags: ["full stack", "aws", "databases", "angular", "nodejs"],
 }];

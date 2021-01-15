@@ -11,15 +11,19 @@ class HomePage extends React.Component {
     this.state = {
       filters: [],
       filterText: "",
+      inputPlaceholder: filler,
     };
 
     this.handleFilterInput = this.handleFilterInput.bind(this);
   }
 
   handleFilterInput(event) {
-    console.log(event.target.value.replaceAll(/[^a-zA-Z ]/g, "").split(" "));
     this.setState((state, props) => {
-      return {filterText: event.target.value, filters: event.target.value.replaceAll(/[^a-zA-Z ]/g, "").split(" ")}
+      return {
+        filterText: event.target.value,
+        filters: event.target.value.replaceAll(/[^a-zA-Z ]/g, "").split(" "),
+        inputPlaceholder: event.target.value.length === 0 ? filler : "",
+      }
     });
   }
 
@@ -45,7 +49,14 @@ class HomePage extends React.Component {
           <div className="accomplish-text container">
             <h1>I am a <b>Computer Science</b> major</h1>
             <h1>studying at the <b>University of California, Berkeley</b>.</h1>
-            <div className="accomplish-input-container"><span>I work with </span><input autocomplete="off" value={this.state.filterText} onChange={this.handleFilterInput}></input></div>
+            <div className="accomplish-input-container">
+              <span>I work with&nbsp;</span>
+              <div className="accomplish-input-overlay">
+                <span className="accomplish-input-gray">{this.state.inputPlaceholder}</span>
+                <input autocomplete="off" value={this.state.filterText} onChange={this.handleFilterInput}></input>
+                
+              </div>
+            </div>
           </div>
           <hr></hr>
           <div className="container">
@@ -79,5 +90,7 @@ const test = [
   description: ["Developed for Digital Academy, Lockheed’s internal education platform used by over 23,000 employees", "Helped transform Digital Academy from a MEAN site with an Express backend into a serverless application built with AWS Lambda and NodeJS, reducing operational costs by 23% and allowing for zero downtime deployments", "Created full-stack AWS serverless applications using NodeJS, Angular, and DynamoDB for Lockheed's rapid prototyping team and implemented OpenID authentication for WordPress sites"],
   tags: ["full stack", "aws", "databases", "angular", "nodejs"],
 }];
+
+const filler = "backend, Go, full stack, databases";
 
 export default HomePage;

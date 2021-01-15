@@ -88,14 +88,38 @@ a.icon-link:hover {
   font-weight: bold;
 }
 .accomplish-text input {
+  position: absolute;
   font-size: 36px;
   font-weight: bold;
   border: none;
   color: var(--main-black);
-  background-color: var(--background-gray);
+  background: transparent;
   font-family: 'Red Hat Text', 'Roboto', 'Ubuntu', sans-serif;
+  width: 100%;
 }
 .accomplish-text input:focus {
   outline: none;
-  background-color: var(--background-gray);
+  background: transparent;
+}
+
+.accomplish-input-container {
+  display: flex;
+}
+.accomplish-input-overlay {
+  flex-grow: 1;
+  position: relative;
+  z-index: 0;
+}
+
+.accomplish-input-gray {
+  font-size: 36px;
+  font-weight: bold;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  color: var(--accent-gray);
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
 }

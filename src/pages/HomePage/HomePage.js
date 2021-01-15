@@ -15,7 +15,7 @@ class HomePage extends React.Component {
       <div className="homepage">
         <div className="landing">
           <div className="description">
-            <img src={signature}></img>
+            <img alt="Ryan Zhao signature" src={signature}></img>
             <div className="text">
               <p>I am designing this website to attempt to learn <a className="text-link" href="https://reactjs.org/">React</a>. It is a pretty difficult thing to do, as I am horrible at designing things that look good, but it is a difficulty that I will have to overcome. <br /> <br />Part of my struggle in making this website is finding good colors and fonts! Why is this so difficult? There are so many options to choose from, some of which look horrible! Other fonts look exactly the same. What is the meaning behind a good font?</p>
               <a href="mailto:ryanzhao@berkeley.edu" target="_blank" rel="noopener noreferrer" className="icon-link"><FaEnvelope /></a>
@@ -29,7 +29,15 @@ class HomePage extends React.Component {
           </div>
         </div>
         <div className="hp-accomplish">
-          <Portfolio experiences={test} mentorship={test} awards={[]} filters={[]}/>
+          <div className="accomplish-text container">
+            <h1>I am a <b>Computer Science</b> major</h1>
+            <h1>studying at the <b>University of California, Berkeley</b>.</h1>
+            <div className="accomplish-input-container"><span>I work with </span><input autocomplete="off"></input></div>
+          </div>
+          <hr></hr>
+          <div className="container">
+            <Portfolio experiences={test} mentorship={test} awards={[]} filters={[]}/>
+          </div>
         </div>
       </div>
     )

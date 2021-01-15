@@ -11,6 +11,7 @@
   width: 60%;
   position: relative;
   text-align: left;
+  height: min-content;
 }
 .description img {
   padding-left: 4em;
@@ -30,7 +31,7 @@
 a.text-link {
   text-decoration: none;
   position: relative;
-  color: #0D1B2A;
+  color: var(--main-black);
 }
 a.text-link::after {
   content: "";
@@ -48,15 +49,53 @@ a.text-link:hover::after {
 }
 
 a.icon-link {
-  color: #A9AFB6;
+  color: var(--accent-gray);
   margin-right: 0.5em;
   font-size: 20px;
   transition: ease-in 0.1s; 
 }
 a.icon-link:hover {
-  color: #0D1B2A;
+  color: var(--main-black);
 }
 
 .hp-accomplish {
-  margin: 0em 10%;
+  padding-top: 3em;
+}
+.hp-accomplish b{
+  color: var(--accent-blue);
+}
+.hp-accomplish hr {
+  border: none;
+  border-bottom: 1px solid #C4C4C4;
+  padding-top: 3em;
+  margin-bottom: 3em;
+}
+
+
+.accomplish-text {
+  text-align: left;
+}
+.accomplish-text h1 {
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+.accomplish-text h1 {
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+.accomplish-text span {
+  font-size: 36px;
+  font-weight: bold;
+}
+.accomplish-text input {
+  font-size: 36px;
+  font-weight: bold;
+  border: none;
+  color: var(--main-black);
+  background-color: var(--background-gray);
+  font-family: 'Red Hat Text', 'Roboto', 'Ubuntu', sans-serif;
+}
+.accomplish-text input:focus {
+  outline: none;
+  background-color: var(--background-gray);
 }

@@ -1,6 +1,39 @@
+:root {
+  --main-black:  #0D1B2A;
+  --accent-blue: #30ADC9;
+  --accent-orange: #FC7753;
+  --accent-gray: #A9AFB6;
+  --background-gray: #F8F9FA;
+}
+
 .App {
   text-align: center;
   min-height: 100vh;
-  background-color: #F8F9FA;
-  color: #0D1B2A;
+  background-color: var(--background-gray);
+  color: var(--main-black);
 }
+
+.container {
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
+
+

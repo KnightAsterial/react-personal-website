@@ -65,7 +65,7 @@ class HomePage extends React.Component {
           </div>
           <hr></hr>
           <div className="container">
-            <Portfolio experiences={test} mentorship={test} awards={[]} filters={this.state.filters}/>
+            <Portfolio experiences={experiencesList} mentorship={mentorshipList} awards={awardsList} filters={this.state.filters}/>
           </div>
         </div>
       </div>
@@ -73,28 +73,78 @@ class HomePage extends React.Component {
   }
 }
 
-const test = [
+const experiencesList = [
 {
-  organization: "Berkeley Codebase",
-  title: "Software Developer",
-  timeframe: "August 2019 - Present",
-  description: ["Developed for Digital Academy, Lockheed’s internal education platform used by over 23,000 employees", "Helped transform Digital Academy from a MEAN site with an Express backend into a serverless application built with AWS Lambda and NodeJS, reducing operational costs by 23% and allowing for zero downtime deployments", "Created full-stack AWS serverless applications using NodeJS, Angular, and DynamoDB for Lockheed's rapid prototyping team and implemented OpenID authentication for WordPress sites"],
-  tags: ["full stack", "aws", "databases", "angular", "nodejs"],
+  organization: "RiskIQ",
+  title: "Developer through Codebase",
+  timeframe: "August 2020 - Present",
+  description: ["Developed MapReduce pipeline for RiskIQ to parallelize the extraction and aggregation of SSL server configurations from the world's ~2 billion hostnames, improving previous scan times by nearly 85%",
+                "Worked with RiskIQ engineers to analyze hosts for vulnerabilities such as poodle, beast, and drown",
+                "Scanned hosts using zgrab2, stored data in Apache HBase, and created indexed search using Apache Solr"],
+  tags: ["mapreduce", "backend", "security", "zgrab2", "apache"],
+},
+{
+  organization: "DataStax",
+  title: "Developer through Codebase",
+  timeframe: "January 2020 - May 2020",
+  description: ["Built fault-tolerant database migration service to transfer existing Cassandra databases to the cloud",
+                "Designed and created a multithreaded Go proxy that parsed Cassandra’s binary protocol to direct reads/writes during migration for zero user downtime",
+                "Implemented custom communication channel between migration and proxy to coordinate operations"],
+  tags: ["go", "golang", "databases", "cassandra", "networking"],
 },
 {
   organization: "Lockheed Martin",
   title: "Software Engineer Intern",
   timeframe: "July 2019 - August 2020",
-  description: ["Developed for Digital Academy, Lockheed’s internal education platform used by over 23,000 employees", "Helped transform Digital Academy from a MEAN site with an Express backend into a serverless application built with AWS Lambda and NodeJS, reducing operational costs by 23% and allowing for zero downtime deployments", "Created full-stack AWS serverless applications using NodeJS, Angular, and DynamoDB for Lockheed's rapid prototyping team and implemented OpenID authentication for WordPress sites"],
-  tags: ["full stack", "aws", "databases", "angular", "nodejs"],
-},
-{
-  organization: "Ryan's Corporation",
-  title: "Software Person",
-  timeframe: "Never - Never",
-  description: ["Developed for Digital Academy, Lockheed’s internal education platform used by over 23,000 employees", "Helped transform Digital Academy from a MEAN site with an Express backend into a serverless application built with AWS Lambda and NodeJS, reducing operational costs by 23% and allowing for zero downtime deployments", "Created full-stack AWS serverless applications using NodeJS, Angular, and DynamoDB for Lockheed's rapid prototyping team and implemented OpenID authentication for WordPress sites"],
+  description: ["Developed for Digital Academy, Lockheed’s internal education platform used by over 23,000 employees",
+                "Helped transform Digital Academy from a MEAN site with an Express backend into a serverless application built with AWS Lambda and NodeJS, reducing operational costs by 23% and allowing for zero downtime deployments",
+                "Created full-stack AWS serverless applications using NodeJS, Angular, and DynamoDB for Lockheed's rapid prototyping team and implemented OpenID authentication for WordPress sites"],
   tags: ["full stack", "aws", "databases", "angular", "nodejs"],
 }];
+
+const mentorshipList = [
+  {
+    organization: "Berkeley Codebase",
+    title: "Mentored Project Manager",
+    timeframe: "January 2021 - Present",
+    description: ["Trained six students with no web development experience to build a full-stack web application using React, Express, and PostgreSQL",
+                  "Lead professional development mentorship sessions for the mentored developers to break into the software engineering industry",
+                  "Designed and completed a voting portal for The Green Initiative Fund to streamline their grant discussion and approval process"],
+    tags: ["codebase", "mentorship", "react", "postgresql", "express"],
+  },
+  {
+    organization: "Computer Science Mentors",
+    title: "CS 61A Course Tutor",
+    timeframe: "February 2020 - January 2021",
+    description: ["Taught a weekly small-group class for students in Berkeley’s introductory CS course",
+                  "Presented mini-lectures, guided students through practice problems, and offered support on course work",
+                  "Covered concepts such as recursion, mutation, and object-oriented programming"],
+    tags: ["teaching", "mentorship", "staff", "education"],
+  }];
+
+  const awardsList = [
+    {
+      organization: "Lockheed Martin’s AWS Gameday Champion",
+      title: "",
+      timeframe: "July 2020",
+      description: ["Placed 1st out of LM’s 2020 cohort of 2000 interns",
+                    "Leveraged AWS tools like EKS, CloudFront, and Forecast to best solve the Gameday’s challenges"],
+      tags: ["aws", "lockheed"],
+    },
+    {
+      organization: "American Invitational Mathematics Exam (AIME) Qualifier",
+      title: "",
+      timeframe: "March 2019",
+      description: ["Recognized for scoring among the top 5% nationally in the American Mathematics Competition"],
+      tags: ["AIME", "AMC", "math", "olympiad"],
+    },
+    {
+      organization: "National Merit Scholarship Recipient",
+      title: "",
+      timeframe: "April 2019",
+      description: ["Received a scholarship awarded to 2500 students out of 1.6 million applicants"],
+      tags: ["psat", "sat", "honors"],
+    }];
 
 const filler = "backend, Go, full stack, databases";
 

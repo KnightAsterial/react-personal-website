@@ -1,17 +1,14 @@
-.homepage {
-  padding-top: 3em;
-}
-
 .landing {
   display: flex;
   min-height: calc(100vh - 5em);
+  align-items: center;
 }
 
 .description {
   width: 60%;
   position: relative;
+  top: -50px;
   text-align: left;
-  height: min-content;
 }
 .description img {
   padding-left: 4em;
@@ -19,9 +16,10 @@
   max-width: 70em;
 }
 .description .text {
-  position: absolute;
+  position: relative;
   left: min(4em + 28%, 23.6em);
-  top: 60%;
+  width: max(100% - 4em - 28%, 100% - 23.6em);
+  margin-top: -20%;
 }
 
 .sidePhoto {
@@ -56,6 +54,19 @@ a.icon-link {
 }
 a.icon-link:hover {
   color: var(--main-black);
+}
+
+.scrollChevron {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  display: none;
+}
+
+@media (min-height: 860px) {
+  .scrollChevron {
+    display: block;
+  }
 }
 
 .hp-accomplish {

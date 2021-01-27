@@ -44,8 +44,13 @@ class HomePage extends React.Component {
           <div className="sidePhoto">
 
           </div>
+          <a className="scrollChevron" href="#portfolio">
+            <svg width="54" height="30" viewBox="0 0 54 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 2L27 27L52 2" stroke="#30ADC9" stroke-width="5" stroke-linejoin="round"/>
+            </svg>
+          </a>
         </div>
-        <div className="hp-accomplish">
+        <div id="portfolio" className="hp-accomplish">
           <div className="accomplish-text container">
             <h1>I am a <b>Computer Science</b> major</h1>
             <h1>studying at the <b>University of California, Berkeley</b>.</h1>

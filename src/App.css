@@ -4,6 +4,8 @@
   --accent-orange: #FC7753;
   --accent-gray: #A9AFB6;
   --background-gray: #F8F9FA;
+
+  scroll-behavior: smooth;
 }
 
 .App {

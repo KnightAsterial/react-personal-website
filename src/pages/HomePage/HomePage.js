@@ -17,6 +17,7 @@ class HomePage extends React.Component {
     };
 
     this.descriptionRef = React.createRef();
+    this.inputRef = React.createRef();
     this.reachedPortfolio = false;
     this.typewriterWordIndex = 0;
     this.typewriterCharIndex = 0;
@@ -61,9 +62,10 @@ class HomePage extends React.Component {
         this.typewriterCharIndex = 0;
         setTimeout(this.handleTypewriter, this.typewriterSpeed);
       } else if (this.typewriterWordIndex === typewriterWords.length) {
-        setTimeout(() => {this.setState(
-          {filterText: "", filters:[""], inputPlaceholder: filler}
-        )}, this.typewriterSpeed * 4);
+        setTimeout(() => {
+          this.setState({filterText: "", filters:[""], inputPlaceholder: filler});
+          this.inputRef.current.focus()
+        }, this.typewriterSpeed * 4);
       }
     }
   }
@@ -96,7 +98,7 @@ class HomePage extends React.Component {
           <div ref={this.descriptionRef} className="description">
             <img alt="Ryan Zhao signature" src={signature}></img>
             <div className="text">
-              <p>I am designing this website to attempt to learn <a className="text-link" href="https://reactjs.org/">React</a>. It is a pretty difficult thing to do, as I am horrible at designing things that look good, but it is a difficulty that I will have to overcome. <br /> <br />Part of my struggle in making this website is finding good colors and fonts! Why is this so difficult? There are so many options to choose from, some of which look horrible! Other fonts look exactly the same. What is the meaning behind a good font?</p>
+              <p>Hello! I am a sophomore studying computer science and math at <a className="text-link" href="https://www.berkeley.edu/" target="_blank" rel="noopener noreferrer">UC Berkeley</a>. I love designing software and thinking about algorithmic challenges. This upcoming summer, I will be working as a software engineer intern at <a className="text-link" href="https://www.amazon.com/" target="_blank" rel="noopener noreferrer">Amazon</a>.<br /><br />Outside of work, I am involved in some great organizations on campus. I am a mentored project manager for <a className="text-link" href="https://codebase.berkeley.edu/" target="_blank" rel="noopener noreferrer">Codebase</a>, where I teach students the fundamentals of software engineering. Previously, I have also been a course mentor for CS 61A through <a className="text-link" href="https://csmentors.berkeley.edu/" target="_blank" rel="noopener noreferrer">CSM</a>.</p>
               <a href="mailto:ryanzhao@berkeley.edu" target="_blank" rel="noopener noreferrer" className="icon-link"><FaEnvelope /></a>
               <a href="https://github.com/KnightAsterial" target="_blank" rel="noopener noreferrer" className="icon-link"><FaGithub /></a>
               <a href="https://www.linkedin.com/in/ryan-zhao-ab4752121" target="_blank" rel="noopener noreferrer" className="icon-link"><FaLinkedin /></a>
@@ -120,7 +122,7 @@ class HomePage extends React.Component {
               <span>I work with&nbsp;</span>
               <div className="accomplish-input-overlay">
                 <span className="accomplish-input-gray">{this.state.inputPlaceholder}</span>
-                <input autoComplete="off" value={this.state.filterText} onChange={this.handleFilterInput}></input>
+                <input autoComplete="off" ref={this.inputRef} value={this.state.filterText} onChange={this.handleFilterInput}></input>
                 
               </div>
             </div>

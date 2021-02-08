@@ -73,6 +73,10 @@ a.icon-link:hover {
   }
 }
 
+#portfolio {
+  min-height: 100vh;
+}
+
 .hp-accomplish {
   padding-top: 3em;
 }

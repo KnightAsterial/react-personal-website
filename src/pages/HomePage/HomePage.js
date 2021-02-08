@@ -1,5 +1,7 @@
 import './HomePage.css';
-import signature from './../../assets/tempSig.png'
+import signature from './../../assets/tempSig.png';
+import profilepic from './../../assets/brushMe.png';
+import resume from './../../assets/ryan-zhao-resume.pdf';
 import React from 'react';
 import { FaGithub, FaLinkedin, FaFileAlt, FaEnvelope } from 'react-icons/fa';
 
@@ -14,39 +16,99 @@ class HomePage extends React.Component {
       inputPlaceholder: filler,
     };
 
+    this.descriptionRef = React.createRef();
+    this.reachedPortfolio = false;
+    this.typewriterWordIndex = 0;
+    this.typewriterCharIndex = 0;
+    this.typewriterSpeed = 150;
+
     this.handleFilterInput = this.handleFilterInput.bind(this);
+    this.scrollListener = this.scrollListener.bind(this);
+    this.handleTypewriter = this.handleTypewriter.bind(this);
   }
 
   handleFilterInput(event) {
     this.setState((state, props) => {
       return {
         filterText: event.target.value,
-        filters: event.target.value.replaceAll(/[^a-zA-Z ]/g, "").split(" "),
+        filters: event.target.value.trim().replaceAll(/[^a-zA-Z ]/g, "").split(" "),
         inputPlaceholder: event.target.value.length === 0 ? filler : "",
       }
     });
+  }
+
+  handleTypewriter() {
+    console.log("handling typerwriter with", this.typewriterWordIndex, this.typewriterCharIndex);
+    let currentWord = typewriterWords[this.typewriterWordIndex];
+    this.typewriterCharIndex += 1;
+    if (this.typewriterCharIndex < currentWord.length) {
+      let substr = currentWord.substring(0, this.typewriterCharIndex);
+      this.setState({
+        filterText: substr,
+        filters: substr.split(" "),
+        inputPlaceholder: ""});
+      setTimeout(this.handleTypewriter, this.typewriterSpeed);
+    } else if (this.typewriterCharIndex === currentWord.length){
+      let substr = currentWord.substring(0, this.typewriterCharIndex);
+      this.setState({
+        filterText: substr,
+        filters: substr.split(" "),
+        inputPlaceholder: ""});
+      setTimeout(this.handleTypewriter, this.typewriterSpeed * 4);
+    } else {
+      this.typewriterWordIndex += 1;
+      if (this.typewriterWordIndex < typewriterWords.length) {
+        this.typewriterCharIndex = 0;
+        setTimeout(this.handleTypewriter, this.typewriterSpeed);
+      } else if (this.typewriterWordIndex === typewriterWords.length) {
+        setTimeout(() => {this.setState(
+          {filterText: "", filters:[""], inputPlaceholder: filler}
+        )}, this.typewriterSpeed * 4);
+      }
+    }
+  }
+
+  scrollListener() {
+    if (this.descriptionRef.current.getBoundingClientRect().bottom < 0) {
+      console.log("test");
+      if (!this.reachedPortfolio) {
+        this.reachedPortfolio = true;
+        this.handleTypewriter();
+        window.removeEventListener('scroll', this.scrollListener);
+      }
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.scrollListener);
+  }
+
+  componentWillUnmount() {
+    if (!this.reachedPortfolio) {
+      window.removeEventListener('scroll', this.scrollListener);
+    }
   }
 
   render() {
     return (
       <div className="homepage">
         <div className="landing">
-          <div className="description">
+          <div ref={this.descriptionRef} className="description">
             <img alt="Ryan Zhao signature" src={signature}></img>
             <div className="text">
               <p>I am designing this website to attempt to learn <a className="text-link" href="https://reactjs.org/">React</a>. It is a pretty difficult thing to do, as I am horrible at designing things that look good, but it is a difficulty that I will have to overcome. <br /> <br />Part of my struggle in making this website is finding good colors and fonts! Why is this so difficult? There are so many options to choose from, some of which look horrible! Other fonts look exactly the same. What is the meaning behind a good font?</p>
               <a href="mailto:ryanzhao@berkeley.edu" target="_blank" rel="noopener noreferrer" className="icon-link"><FaEnvelope /></a>
               <a href="https://github.com/KnightAsterial" target="_blank" rel="noopener noreferrer" className="icon-link"><FaGithub /></a>
               <a href="https://www.linkedin.com/in/ryan-zhao-ab4752121" target="_blank" rel="noopener noreferrer" className="icon-link"><FaLinkedin /></a>
-              <a target="_blank" rel="noopener noreferrer" className="icon-link"><FaFileAlt /></a>
+              <a href={resume} target="_blank" rel="noopener noreferrer" className="icon-link"><FaFileAlt /></a>
             </div>
           </div>
           <div className="sidePhoto">
-
+            <img alt="Ryan Zhao profile" src={profilepic}></img>
           </div>
           <a className="scrollChevron" href="#portfolio">
             <svg width="54" height="30" viewBox="0 0 54 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2 2L27 27L52 2" stroke="#30ADC9" stroke-width="5" stroke-linejoin="round"/>
+              <path d="M2 2L27 27L52 2" stroke="#30ADC9" strokeWidth="5" strokeLinejoin="round"/>
             </svg>
           </a>
         </div>
@@ -58,7 +120,7 @@ class HomePage extends React.Component {
               <span>I work with&nbsp;</span>
               <div className="accomplish-input-overlay">
                 <span className="accomplish-input-gray">{this.state.inputPlaceholder}</span>
-                <input autocomplete="off" value={this.state.filterText} onChange={this.handleFilterInput}></input>
+                <input autoComplete="off" value={this.state.filterText} onChange={this.handleFilterInput}></input>
                 
               </div>
             </div>
@@ -73,6 +135,7 @@ class HomePage extends React.Component {
   }
 }
 
+/* Temporarily placed here just to have things show up */
 const experiencesList = [
 {
   organization: "RiskIQ",
@@ -90,7 +153,7 @@ const experiencesList = [
   description: ["Built fault-tolerant database migration service to transfer existing Cassandra databases to the cloud",
                 "Designed and created a multithreaded Go proxy that parsed Cassandra’s binary protocol to direct reads/writes during migration for zero user downtime",
                 "Implemented custom communication channel between migration and proxy to coordinate operations"],
-  tags: ["go", "golang", "databases", "cassandra", "networking"],
+  tags: ["go", "golang", "databases", "cassandra", "networking", "backend"],
 },
 {
   organization: "Lockheed Martin",
@@ -147,5 +210,6 @@ const mentorshipList = [
     }];
 
 const filler = "backend, Go, full stack, databases";
+const typewriterWords = ["databases", "education", "React"];
 
 export default HomePage;

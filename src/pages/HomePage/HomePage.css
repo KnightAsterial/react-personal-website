@@ -7,7 +7,6 @@
 .description {
   width: 60%;
   position: relative;
-  top: -50px;
   text-align: left;
 }
 .description img {
@@ -23,7 +22,12 @@
 }
 
 .sidePhoto {
-  width: 40%
+  width: 40%;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+.sidePhoto img{
+  max-width: 100%;
 }
 
 a.text-link {

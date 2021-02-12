@@ -3,6 +3,7 @@ import './App.css';
 import NavBar from './components/navbar/Navbar';
 import HomePage from './pages/HomePage/HomePage';
 import TestPage from './pages/TestPage/TestPage';
+import TeachingPage from './pages/TeachingPage/TeachingPage';
 
 import { Switch, Route } from 'react-router-dom';
 
@@ -18,7 +19,7 @@ function App() {
           <TestPage />
         </Route>
         <Route exact path="/teaching">
-          <TestPage />
+          <TeachingPage />
         </Route>
         <Route exact path="/contact">
           <TestPage />

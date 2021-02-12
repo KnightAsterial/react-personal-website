@@ -37,5 +37,13 @@
   }
 }
 
-
-
+a.text-link {
+  text-decoration: none;
+  position: relative;
+  color: var(--main-black);
+  box-shadow: 0 -.5em 0 rgba(252, 119, 83, 0.4) inset;
+  transition: ease-out 0.25s;
+}
+a.text-link:hover {
+  box-shadow: 0 -1.3em 0 rgba(252, 119, 83, 0.4) inset;
+}

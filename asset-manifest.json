@@ -1,25 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.6662dfed.chunk.css",
-    "main.js": "/static/js/main.bf536d99.chunk.js",
-    "main.js.map": "/static/js/main.bf536d99.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.21577ea6.js",
-    "runtime-main.js.map": "/static/js/runtime-main.21577ea6.js.map",
-    "static/js/2.fb26c4b3.chunk.js": "/static/js/2.fb26c4b3.chunk.js",
-    "static/js/2.fb26c4b3.chunk.js.map": "/static/js/2.fb26c4b3.chunk.js.map",
-    "static/js/3.e43428b6.chunk.js": "/static/js/3.e43428b6.chunk.js",
-    "static/js/3.e43428b6.chunk.js.map": "/static/js/3.e43428b6.chunk.js.map",
+    "main.css": "/static/css/main.0de3331e.css",
+    "main.js": "/static/js/main.cc92b6ab.js",
+    "static/js/377.3eed911e.chunk.js": "/static/js/377.3eed911e.chunk.js",
+    "static/media/brushMe.png": "/static/media/brushMe.3977258608e897e83475.png",
+    "static/media/tempSig.png": "/static/media/tempSig.2a5c92212966d0a86b7b.png",
+    "static/media/ryan-zhao-resume.pdf": "/static/media/ryan-zhao-resume.f107b4164fed43f08a28.pdf",
     "index.html": "/index.html",
-    "static/css/main.6662dfed.chunk.css.map": "/static/css/main.6662dfed.chunk.css.map",
-    "static/js/2.fb26c4b3.chunk.js.LICENSE.txt": "/static/js/2.fb26c4b3.chunk.js.LICENSE.txt",
-    "static/media/brushMe.39772586.png": "/static/media/brushMe.39772586.png",
-    "static/media/ryan-zhao-resume.7bb03632.pdf": "/static/media/ryan-zhao-resume.7bb03632.pdf",
-    "static/media/tempSig.2a5c9221.png": "/static/media/tempSig.2a5c9221.png"
+    "main.0de3331e.css.map": "/static/css/main.0de3331e.css.map",
+    "main.cc92b6ab.js.map": "/static/js/main.cc92b6ab.js.map",
+    "377.3eed911e.chunk.js.map": "/static/js/377.3eed911e.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.21577ea6.js",
-    "static/js/2.fb26c4b3.chunk.js",
-    "static/css/main.6662dfed.chunk.css",
-    "static/js/main.bf536d99.chunk.js"
+    "static/css/main.0de3331e.css",
+    "static/js/main.cc92b6ab.js"
   ]
 }

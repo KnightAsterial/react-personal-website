@@ -1,0 +1,7 @@
+.readings-page {
+    text-align: left;
+}
+
+.readings-page p+ul{
+    margin-top: -1em;
+}

@@ -75,9 +75,6 @@ a.icon-link:hover {
 .hp-accomplish {
   padding-top: 3em;
 }
-.hp-accomplish b{
-  color: var(--accent-blue);
-}
 .hp-accomplish hr {
   border: none;
   border-bottom: 1px solid #C4C4C4;

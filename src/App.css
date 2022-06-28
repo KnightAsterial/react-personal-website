@@ -47,3 +47,7 @@ a.text-link {
 a.text-link:hover {
   box-shadow: 0 -1.3em 0 rgba(252, 119, 83, 0.4) inset;
 }
+
+b {
+  color: var(--accent-blue);
+}

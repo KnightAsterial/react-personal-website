@@ -98,7 +98,7 @@ class HomePage extends React.Component {
           <div ref={this.descriptionRef} className="description">
             <img alt="Ryan Zhao signature" src={signature}></img>
             <div className="text">
-              <p>Hello! I am a sophomore studying computer science and math at <a className="text-link" href="https://www.berkeley.edu/" target="_blank" rel="noopener noreferrer">UC Berkeley</a>. I love designing software and thinking about algorithmic challenges. This upcoming summer, I will be working as a software engineer intern.<br /><br />Outside of work, I am involved in some great organizations on campus. I am a mentored project manager for <a className="text-link" href="https://codebase.berkeley.edu/" target="_blank" rel="noopener noreferrer">Codebase</a>, where I teach students the fundamentals of software engineering. Previously, I have also been a course mentor for CS 61A through <a className="text-link" href="https://csmentors.berkeley.edu/" target="_blank" rel="noopener noreferrer">CSM</a>.</p>
+              <p>Hello! I am a senior studying computer science and math at <a className="text-link" href="https://www.berkeley.edu/" target="_blank" rel="noopener noreferrer">UC Berkeley</a>. I love designing software and thinking about algorithmic challenges. This summer, I am working as a software engineer intern at <a className="text-link" href="https://www.cockroachlabs.com/" target="_blank" rel="noopener noreferrer">Cockroach Labs</a>.<br /><br />Outside of work, I am involved in some great organizations on campus. Previously, I was the President of <a className="text-link" href="https://codebase.berkeley.edu/" target="_blank" rel="noopener noreferrer">Codebase</a>. I have also been a course mentor for CS 61A through <a className="text-link" href="https://csmentors.berkeley.edu/" target="_blank" rel="noopener noreferrer">CSM</a>.</p>
               <a href="mailto:ryanzhao@berkeley.edu" target="_blank" rel="noopener noreferrer" className="icon-link"><FaEnvelope /></a>
               <a href="https://github.com/KnightAsterial" target="_blank" rel="noopener noreferrer" className="icon-link"><FaGithub /></a>
               <a href="https://www.linkedin.com/in/ryan-zhao-ab4752121" target="_blank" rel="noopener noreferrer" className="icon-link"><FaLinkedin /></a>
@@ -140,9 +140,28 @@ class HomePage extends React.Component {
 /* Temporarily placed here just to have things show up */
 const experiencesList = [
 {
+  organization: "UC Berkeley RISE Lab",
+  title: "Research Assistant",
+  timeframe: "August 2021 - March 2022",
+  description: ["Designed novel benchmark for distributed database systems using a probabilistic workload generated from industry query distributions",
+                "Developed drivers in C++ to run workload on 4 distributed database systems and evaluated performance",
+                "Worked under Audrey Cheng, supervised by Ion Stoica and Natacha Crooks"],
+  tags: ["distributed", "backend", "systems", "databases", "research"],
+},
+{
+  organization: "Amazon Web Services",
+  title: "Software Development Intern",
+  timeframe: "May 2021 - August 2021",
+  description: ["Built IOPS canary for AWS Elastic File System (EFS) to detect regressions in promised IO throughput",
+                "Designed a multithreaded poller to perform block-level file operations and push loads of up to 300 MiB/s",
+                "Managed proper inode metadata to durably track allocated blocks and prevent memory leakage",
+                "Engineered custom build and deployment process using Apache Ant and internal Amazon tooling"],
+  tags: ["distributed", "backend", "systems", "aws", "java"],
+},
+{
   organization: "RiskIQ",
   title: "Developer through Codebase",
-  timeframe: "August 2020 - Present",
+  timeframe: "August 2020 - December 2020",
   description: ["Developed MapReduce pipeline for RiskIQ to parallelize the extraction and aggregation of SSL server configurations from the world's ~2 billion hostnames, improving previous scan times by nearly 85%",
                 "Worked with RiskIQ engineers to analyze hosts for vulnerabilities such as poodle, beast, and drown",
                 "Scanned hosts using zgrab2, stored data in Apache HBase, and created indexed search using Apache Solr"],
@@ -169,9 +188,27 @@ const experiencesList = [
 
 const mentorshipList = [
   {
+    organization: "CS 170 Course Staff",
+    title: "Reader",
+    timeframe: "August 2021 - Dec 2021",
+    description: ["Taught Efficient Algorithms and Intractable Problems to a class of 700 undergraduate students.",
+                  "Hosted office hours to help students with homework, understanding course concepts, and test preparation. Assisted with over 100 students.",
+                  "Created rubrics for and graded homework assignments and examinations."],
+    tags: ["teaching", "algorithms", "theory", "education", "assistant"],
+  },
+  {
+    organization: "Berkeley Codebase",
+    title: "Client Project Manager",
+    timeframe: "August 2021 - Dec 2021",
+    description: ["Designed and developed distributed tracing protocol using AWS X-Ray for the health-tech company Ginger (now Headspace Health) to track the execution flow of requests to their internal API",
+                  "Managed team of 6 developers over 15 weeks, communicated daily with Ginger managers and engineers",
+                  "Led professional development mentorship sessions for developers to break into the SWE industry"],
+    tags: ["codebase", "mentorship", "python", "management", "leadership"],
+  },
+  {
     organization: "Berkeley Codebase",
     title: "Mentored Project Manager",
-    timeframe: "January 2021 - Present",
+    timeframe: "January 2021 - May 2021",
     description: ["Trained six students with no web development experience to build a full-stack web application using React, Express, and PostgreSQL",
                   "Lead professional development mentorship sessions for the mentored developers to break into the software engineering industry",
                   "Designed and completed a voting portal for The Green Initiative Fund to streamline their grant discussion and approval process"],

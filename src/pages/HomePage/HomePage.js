@@ -1,7 +1,7 @@
 import './HomePage.css';
 import signature from './../../assets/tempSig.png';
 import profilepic from './../../assets/brushMe.png';
-import resume from './../../assets/ryan-zhao-resume.pdf';
+import resume from './../../assets/Ryan-Zhao-Resume-2024.pdf';
 import React from 'react';
 import { FaGithub, FaLinkedin, FaFileAlt, FaEnvelope } from 'react-icons/fa';
 
@@ -140,14 +140,9 @@ class HomePage extends React.Component {
         <div className="landing container">
           <div ref={this.descriptionRef} className="description">
             <div className="text">
-<<<<<<< Updated upstream
-              <p>Hello! I am a senior studying computer science and math at <a className="text-link" href="https://www.berkeley.edu/" target="_blank" rel="noopener noreferrer">UC Berkeley</a>. I love designing software and thinking about algorithmic challenges. This summer, I am working as a software engineer intern at <a className="text-link" href="https://www.cockroachlabs.com/" target="_blank" rel="noopener noreferrer">Cockroach Labs</a>.<br /><br />Outside of work, I am involved in some great organizations on campus. Previously, I was the President of <a className="text-link" href="https://codebase.berkeley.edu/" target="_blank" rel="noopener noreferrer">Codebase</a>. I have also been a course mentor for CS 61A through <a className="text-link" href="https://csmentors.berkeley.edu/" target="_blank" rel="noopener noreferrer">CSM</a>.</p>
-              <a href="mailto:ryanzhao@berkeley.edu" target="_blank" rel="noopener noreferrer" className="icon-link"><FaEnvelope /></a>
-=======
               <h1 id="big-name">Ryan Zhao</h1>
               <p>Hello! I am a Master's student studying computer science at <a className="text-link" href="https://www.stanford.edu/" target="_blank" rel="noopener noreferrer">Stanford University</a>. I am interested in the applications of machine learning for computational drug discovery, therapeutics design, and human genomics. Most recently, I have been working as a graduate student researcher with <a className="text-link" href="https://kundajelab.stanford.edu/" target="_blank" rel="noopener noreferrer">Anshul Kundaje</a> studying human cardiogenesis and contrastive learning for TCR/epitope binding prediction. <br /><br />Previously, I was an undergraduate student at <a className="text-link" href="https://www.berkeley.edu/" target="_blank" rel="noopener noreferrer">UC Berkeley</a>, where I worked in distributed systems and database design. I am grateful for the experience I gained working in industry at <a className="text-link" href="https://www.cockroachlabs.com/" target="_blank" rel="noopener noreferrer">Cockroach Labs</a> and <a className="text-link" href="https://aws.amazon.com/efs/" target="_blank" rel="noopener noreferrer">AWS Elastic File Systems</a>.</p>
               <a href="mailto:ryanzhao@stanford.edu" target="_blank" rel="noopener noreferrer" className="icon-link"><FaEnvelope /></a>
->>>>>>> Stashed changes
               <a href="https://github.com/KnightAsterial" target="_blank" rel="noopener noreferrer" className="icon-link"><FaGithub /></a>
               <a href="https://www.linkedin.com/in/ryan-zhao-ab4752121" target="_blank" rel="noopener noreferrer" className="icon-link"><FaLinkedin /></a>
               <a href={resume} target="_blank" rel="noopener noreferrer" className="icon-link"><FaFileAlt /></a>

@@ -92,48 +92,72 @@ class HomePage extends React.Component {
   }
 
   render() {
+    // return (
+    //   <div className="homepage">
+    //     <div className="landing">
+    //       <div ref={this.descriptionRef} className="description">
+    //         <img alt="Ryan Zhao signature" src={signature}></img>
+    //         <div className="text">
+    //           <p>Hello! I am a sophomore studying computer science and math at <a className="text-link" href="https://www.berkeley.edu/" target="_blank" rel="noopener noreferrer">UC Berkeley</a>. I love designing software and thinking about algorithmic challenges. This upcoming summer, I will be working as a software engineer intern.<br /><br />Outside of work, I am involved in some great organizations on campus. I am a mentored project manager for <a className="text-link" href="https://codebase.berkeley.edu/" target="_blank" rel="noopener noreferrer">Codebase</a>, where I teach students the fundamentals of software engineering. Previously, I have also been a course mentor for CS 61A through <a className="text-link" href="https://csmentors.berkeley.edu/" target="_blank" rel="noopener noreferrer">CSM</a>.</p>
+    //           <a href="mailto:ryanzhao@berkeley.edu" target="_blank" rel="noopener noreferrer" className="icon-link"><FaEnvelope /></a>
+    //           <a href="https://github.com/KnightAsterial" target="_blank" rel="noopener noreferrer" className="icon-link"><FaGithub /></a>
+    //           <a href="https://www.linkedin.com/in/ryan-zhao-ab4752121" target="_blank" rel="noopener noreferrer" className="icon-link"><FaLinkedin /></a>
+    //           <a href={resume} target="_blank" rel="noopener noreferrer" className="icon-link"><FaFileAlt /></a>
+    //         </div>
+    //       </div>
+    //       <div className="sidePhoto">
+    //         <img alt="Ryan Zhao profile" src={profilepic}></img>
+    //       </div>
+    //       <a className="scrollChevron" href="#portfolio">
+    //         <svg width="54" height="30" viewBox="0 0 54 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+    //           <path d="M2 2L27 27L52 2" stroke="#30ADC9" strokeWidth="5" strokeLinejoin="round"/>
+    //         </svg>
+    //       </a>
+    //     </div>
+    //     <div id="portfolio" className="hp-accomplish">
+    //       <div className="accomplish-text container">
+    //         <h1>I am a <b>Computer Science</b> major</h1>
+    //         <h1>studying at the <b>University of California, Berkeley</b>.</h1>
+    //         <div className="accomplish-input-container">
+    //           <span>I work with&nbsp;</span>
+    //           <div className="accomplish-input-overlay">
+    //             <span className="accomplish-input-gray">{this.state.inputPlaceholder}</span>
+    //             <input autoComplete="off" ref={this.inputRef} value={this.state.filterText} onChange={this.handleFilterInput}></input>
+                
+    //           </div>
+    //         </div>
+    //       </div>
+    //       <hr></hr>
+    //       <div className="container">
+    //         <Portfolio experiences={experiencesList} mentorship={mentorshipList} awards={awardsList} filters={this.state.filters}/>
+    //       </div>
+    //     </div>
+    //   </div>
+    // )
+
     return (
       <div className="homepage">
-        <div className="landing">
+        <div className="landing container">
           <div ref={this.descriptionRef} className="description">
-            <img alt="Ryan Zhao signature" src={signature}></img>
             <div className="text">
+<<<<<<< Updated upstream
               <p>Hello! I am a senior studying computer science and math at <a className="text-link" href="https://www.berkeley.edu/" target="_blank" rel="noopener noreferrer">UC Berkeley</a>. I love designing software and thinking about algorithmic challenges. This summer, I am working as a software engineer intern at <a className="text-link" href="https://www.cockroachlabs.com/" target="_blank" rel="noopener noreferrer">Cockroach Labs</a>.<br /><br />Outside of work, I am involved in some great organizations on campus. Previously, I was the President of <a className="text-link" href="https://codebase.berkeley.edu/" target="_blank" rel="noopener noreferrer">Codebase</a>. I have also been a course mentor for CS 61A through <a className="text-link" href="https://csmentors.berkeley.edu/" target="_blank" rel="noopener noreferrer">CSM</a>.</p>
               <a href="mailto:ryanzhao@berkeley.edu" target="_blank" rel="noopener noreferrer" className="icon-link"><FaEnvelope /></a>
+=======
+              <h1 id="big-name">Ryan Zhao</h1>
+              <p>Hello! I am a Master's student studying computer science at <a className="text-link" href="https://www.stanford.edu/" target="_blank" rel="noopener noreferrer">Stanford University</a>. I am interested in the applications of machine learning for computational drug discovery, therapeutics design, and human genomics. Most recently, I have been working as a graduate student researcher with <a className="text-link" href="https://kundajelab.stanford.edu/" target="_blank" rel="noopener noreferrer">Anshul Kundaje</a> studying human cardiogenesis and contrastive learning for TCR/epitope binding prediction. <br /><br />Previously, I was an undergraduate student at <a className="text-link" href="https://www.berkeley.edu/" target="_blank" rel="noopener noreferrer">UC Berkeley</a>, where I worked in distributed systems and database design. I am grateful for the experience I gained working in industry at <a className="text-link" href="https://www.cockroachlabs.com/" target="_blank" rel="noopener noreferrer">Cockroach Labs</a> and <a className="text-link" href="https://aws.amazon.com/efs/" target="_blank" rel="noopener noreferrer">AWS Elastic File Systems</a>.</p>
+              <a href="mailto:ryanzhao@stanford.edu" target="_blank" rel="noopener noreferrer" className="icon-link"><FaEnvelope /></a>
+>>>>>>> Stashed changes
               <a href="https://github.com/KnightAsterial" target="_blank" rel="noopener noreferrer" className="icon-link"><FaGithub /></a>
               <a href="https://www.linkedin.com/in/ryan-zhao-ab4752121" target="_blank" rel="noopener noreferrer" className="icon-link"><FaLinkedin /></a>
               <a href={resume} target="_blank" rel="noopener noreferrer" className="icon-link"><FaFileAlt /></a>
             </div>
           </div>
-          <div className="sidePhoto">
-            <img alt="Ryan Zhao profile" src={profilepic}></img>
-          </div>
-          <a className="scrollChevron" href="#portfolio">
-            <svg width="54" height="30" viewBox="0 0 54 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2 2L27 27L52 2" stroke="#30ADC9" strokeWidth="5" strokeLinejoin="round"/>
-            </svg>
-          </a>
-        </div>
-        <div id="portfolio" className="hp-accomplish">
-          <div className="accomplish-text container">
-            <h1>I am a <b>Computer Science</b> major</h1>
-            <h1>studying at the <b>University of California, Berkeley</b>.</h1>
-            <div className="accomplish-input-container">
-              <span>I work with&nbsp;</span>
-              <div className="accomplish-input-overlay">
-                <span className="accomplish-input-gray">{this.state.inputPlaceholder}</span>
-                <input autoComplete="off" ref={this.inputRef} value={this.state.filterText} onChange={this.handleFilterInput}></input>
-                
-              </div>
-            </div>
-          </div>
-          <hr></hr>
-          <div className="container">
-            <Portfolio experiences={experiencesList} mentorship={mentorshipList} awards={awardsList} filters={this.state.filters}/>
-          </div>
         </div>
       </div>
     )
+
+
   }
 }
 
